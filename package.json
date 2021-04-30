@@ -1,0 +1,9 @@
+{
+    "name": "playwright-typescript-folio",
+    "version": "1.0.0",
+    "description": "",
+    "devDependencies": {
+        "@playwright/test": "^0.1102.0",
+        "playwright": "~1.10.0"
+    }
+}
