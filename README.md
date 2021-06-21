@@ -1,8 +1,5 @@
-# Playwright-Typescript-Folio
-* [folio](https://github.com/microsoft/folio#parameters)- is a customizable test framework to build your own test frameworks. Foundation for the Playwright test runner.
-* [playwright-test-runner](https://github.com/microsoft/playwright-test) - Playwright test runner
-Zero config cross-browser end-to-end testing for web apps. Browser automation with Playwright, Jest-like assertions and built-in support for TypeScript.
-* For more details follow playwright-test-runner & folio documentation by clicking on the above link.
+# Playwright-Typescript-Test Runner
+* [Playwright Test Runner](https://playwright.dev/docs/test-intro/)- is a customizable test framework to build your own test frameworks. Foundation for the Playwright test runner.Playwright test runner Zero config cross-browser end-to-end testing for web apps. Browser automation with Playwright, Jest-like assertions and built-in support for TypeScript.
 
 ## Getting Start
 ```
@@ -26,14 +23,22 @@ all set up done & good to go ......
 * npx folio --param browserName=chromium, headful=true, slowMo=50, video=true, screenshotOnFailure=true
 
 ```
-# Run all tests across Chromium, Firefox and WebKit
-npx folio
+# Run all test on all 3 browser
+npx playwright test --browser=all
 
-# Run tests on a single browser
-npx folio --param browserName=chromium
+# Run all tests default in chromium & default is headless
+npx playwright test
 
 # Run all tests in headful mode
-npx folio --param headful
+npx playwright test --headed
+
+# Run all tests on a single browser
+npx playwright test --headed --browser=chromium
+npx playwright test --headed --browser=firefox
+npx playwright test --headed --browser=webkit 
+
+# Run a single test file
+npx playwright test tests/BasicActionOne.spec.ts
 
 # Run tests with slowMo (slows down Playwright operations by n milliseconds)
 npx folio --param slowMo=100
